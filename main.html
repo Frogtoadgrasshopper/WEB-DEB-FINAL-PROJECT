@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Connect </title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            width: 400px; /
+            background-color: #ffffff;
+            border-radius: 15px;
+            border: 1px solid #ddd; 
+        }
+        .header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ffddbb; 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            color: #ff8c00; 
+            font-size: 20px;
+            font-weight: bold;
+        }
 
+    </style>
+</head>
+<body>
+    <div class="container">
+ 
+        <div class="header">
+            <div class="profile-icon">P</div> 
+            <div class="search-container">
+                <input type="text" placeholder="search" class="search-input">
+                <span class="search-icon">&#128269;</span> 
+            </div>
+        </div>
+        
+        <div class="categories">
+            <button class="category-button active">Promos</button>
+            <button class="category-button">Pastries</button>
+            <button class="category-button">Drinks</button>
+            <button class="category-button">Forum</button>
+        </div>
+    
+</body>
+</html>
