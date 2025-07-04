@@ -44,5 +44,20 @@
 
     </div>
   </div>
+  
+   <script>
+    function login() {
+      const name = document.getElementById("name").value.trim();
+      const table = document.getElementById("table").value.trim();
+
+      if (!name || !table) {
+        alert("Please enter both your name and table number.");
+        return;
+      }
+
+      localStorage.setItem("cafeUser", JSON.stringify({ name, table }));
+      window.location.href = "promos.html";
+    }
+     
 </body>
 </html>
