@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cafe Connect</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="STYLE.css" />
 </head>
 <body>
   <div class="container">
     <div class="header">
       <div class="profile-icon">
-        <img src="https://i.pravatar.cc/150?img=3" alt="Profile" />
+        <img src=" alt="Profile" />
       </div>
       <div class="search-container">
         <input type="text" placeholder="search" class="search-input" />
@@ -18,11 +18,11 @@
       </div>
     </div>
 
-    <div class="categories">
-      <button class="category-button active">Promos</button>
-      <button class="category-button">Pastries</button>
-      <button class="category-button">Drinks</button>
-      <button class="category-button">Forum</button>
+     <div class="categories">
+      <a href="promos.html" class="category-button">Promos</a>
+      <a href="pastries.html" class="category-button active">Pastries</a>
+      <a href="drinks.html" class="category-button">Drinks</a>
+      <a href="forum.html" class="category-button">Forum</a>
     </div>
 
     <div class="menu-container">
@@ -33,122 +33,150 @@
         <img src="https://valentinascorner.com/wp-content/uploads/2022/07/Easy-Iced-Caramel-Macchiato.jpg" alt="Caramel Macchiato" />
         <div class="item-details">
           <h3>Caramel Macchiato</h3>
-          <p>Iced Coffee</p>
         </div>
         <div class="item-price">₱129.00</div>
-        <div class="order-buttons">
-          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
-          <input type="text" class="qty-display" value="0" readonly />
-          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
-        </div>
+      <div class="order-buttons">
+      <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+      <input type="text" class="qty-display" value="0" readonly />
+      <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+      <button class="add-to-cart-btn" onclick="addToCart(event, this)">Add to Cart</button>
+      </div>
       </div>
 
       <div class="menu-item" onclick="toggleOrder(this)">
         <img src="https://images.ctfassets.net/v601h1fyjgba/71VWCR6Oclk14tsdM9gTyM/6921cc6b21746f62846c99fa6a872c35/Iced_Latte.jpg" alt="Latte" />
         <div class="item-details">
-          <h3>Latte</h3>
-          <p>Iced Coffee</p>
+          <h3>Latte</h3>     
         </div>
         <div class="item-price">₱129.00</div>
-        <div class="order-buttons">
-          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
-          <input type="text" class="qty-display" value="0" readonly />
-          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
-        </div>
+<div class="order-buttons">
+  <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+  <input type="text" class="qty-display" value="0" readonly />
+  <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+  <button class="add-to-cart-btn" onclick="addToCart(event, this)">Add to Cart</button>
+</div>
       </div>
 
       <div class="menu-item" onclick="toggleOrder(this)">
         <img src="https://images.carbmanager.com/bDf3kntByT2Mc2W7gdIuvXloqmCsPY3BfV8ISS0_ogI/resize:fit:1200/L2Fzc2V0cy5jYXJibWFuYWdlci5jb20vby91c2VyJTJGNGdkMlJoRVpqM2NGR1NKWDVuYjhFQzROWjBEMiUyRmltYWdlcyUyRjBkMjg1Y2YyLTVjNDgtNGQ1OC1iZGNjLWY0YzJiYmQwMzMxNC5qcGc_YWx0PW1lZGlh" alt="Cappuccino" />
         <div class="item-details">
           <h3>Cappuccino</h3>
-          <p>Iced Coffee</p>
         </div>
         <div class="item-price">₱129.00</div>
         <div class="order-buttons">
-          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
-          <input type="text" class="qty-display" value="0" readonly />
-          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
-        </div>
+  <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+  <input type="text" class="qty-display" value="0" readonly />
+  <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+<button class="add-to-cart-btn" onclick="addToCart(event, this)">Add to Cart</button>
+</div>
       </div>
 
       <div class="menu-item" onclick="toggleOrder(this)">
         <img src="https://www.detroitnews.com/gcdn/presto/2019/02/11/PDTN/5c66566c-65ee-4d0b-978a-ee92ca672516-FOOD-HOT-CHOCOLATE-MS.jpg?crop=2159,2152,x0,y848&width=1200&disable=upscale&format=pjpg&auto=webp" alt="Chocolate" />
         <div class="item-details">
           <h3>Chocolate</h3>
-          <p>Hot Coffee</p>
         </div>
         <div class="item-price">₱99.00</div>
-        <div class="order-buttons">
-          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
-          <input type="text" class="qty-display" value="0" readonly />
-          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
-        </div>
+       <div class="order-buttons">
+  <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+  <input type="text" class="qty-display" value="0" readonly />
+  <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+ <button class="add-to-cart-btn" onclick="addToCart(event, this)">Add to Cart</button>
+</div>
+
       </div>
 
       <div class="menu-item" onclick="toggleOrder(this)">
         <img src="https://www.sharmispassions.com/wp-content/uploads/2012/07/espresso-coffee-recipe022.jpg" alt="Espresso" />
         <div class="item-details">
           <h3>Espresso</h3>
-          <p>Hot Coffee</p>
         </div>
         <div class="item-price">₱99.00</div>
-        <div class="order-buttons">
-          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
-          <input type="text" class="qty-display" value="0" readonly />
-          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
-        </div>
+       <div class="order-buttons">
+  <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+  <input type="text" class="qty-display" value="0" readonly />
+  <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+<button class="add-to-cart-btn" onclick="addToCart(event, this)">Add to Cart</button>
+</div>
       </div>
 
-      <!-- Submit Button -->
-      <button class="submit-btn" onclick="submitOrder()">Submit Order</button>
+      <!-- ✅ Submit button OUTSIDE of all menu items -->
+      <button class="submit-btn" onclick="submitOrder(event)">Submit Order</button>
     </div>
   </div>
 
   <script>
-    function toggleOrder(item) {
-      const buttons = item.querySelector('.order-buttons');
-      buttons.classList.toggle('show');
-    }
+   function toggleOrder(item) {
+  const buttons = item.querySelector('.order-buttons');
+  buttons.classList.toggle('show');
+}
 
-    function changeQty(event, btn, delta) {
-      event.stopPropagation();
-      const wrapper = btn.parentElement;
-      const display = wrapper.querySelector('.qty-display');
-      let current = parseInt(display.value);
-      current = Math.max(0, current + delta);
-      display.value = current;
-    }
+function changeQty(event, btn, delta) {
+  event.stopPropagation();
+  const wrapper = btn.parentElement;
+  const display = wrapper.querySelector('.qty-display');
+  let current = parseInt(display.value);
+  current = Math.max(0, current + delta);
+  display.value = current;
+}
 
-    function submitOrder() {
-      const items = document.querySelectorAll('.menu-item');
-      const orderData = [];
-      let total = 0;
+function addToCart(event, btn) {
+  event.stopPropagation();
+  const item = btn.closest('.menu-item');
+  const name = item.querySelector('h3').innerText;
+  const price = parseFloat(item.querySelector('.item-price').innerText.replace('₱', ''));
+  const qty = parseInt(item.querySelector('.qty-display').value);
 
-      items.forEach(item => {
-        const name = item.querySelector('h3').innerText;
-        const price = parseFloat(item.querySelector('.item-price').innerText.replace('₱', ''));
-        const qty = parseInt(item.querySelector('.qty-display').value);
-        if (qty > 0) {
-          const subtotal = price * qty;
-          orderData.push({ name, price, quantity: qty, subtotal });
-          total += subtotal;
-        }
-      });
+  if (qty <= 0) {
+    alert('Please select quantity before adding to cart.');
+    return;
+  }
 
-      if (orderData.length === 0) {
-        alert('You have not selected any items.');
-        return;
-      }
+  const subtotal = price * qty;
 
-      localStorage.setItem('cafeOrder', JSON.stringify({
-        order: orderData,
-        total: total
-      }));
+  // Load existing cart or initialize
+  const existing = JSON.parse(localStorage.getItem('cafeOrder')) || { order: [], total: 0 };
+  const cart = existing.order;
 
-      alert("Order saved to local storage!");
+  // Check if item exists
+  const existingItem = cart.find(item => item.name === name);
+  if (existingItem) {
+    existingItem.quantity += qty;
+    existingItem.subtotal += subtotal;
+  } else {
+    cart.push({ name, price, quantity: qty, subtotal });
+  }
 
-      document.querySelectorAll('.qty-display').forEach(input => input.value = 0);
-    }
+  // Update total
+  const newTotal = cart.reduce((sum, item) => sum + item.subtotal, 0);
+
+  // Save to localStorage
+  localStorage.setItem('cafeOrder', JSON.stringify({
+    order: cart,
+    total: newTotal
+  }));
+
+  // Reset quantity after adding
+  item.querySelector('.qty-display').value = 0;
+
+  alert(`${name} added to cart!`);
+}
+
+function submitOrder(event) {
+  if (event) event.stopPropagation();
+  const order = JSON.parse(localStorage.getItem('cafeOrder')) || { order: [], total: 0 };
+
+  if (order.order.length === 0) {
+    alert('Your cart is empty.');
+    return;
+  }
+
+  // Proceed to confirmation page
+  window.location.href = "ORDERCONFIRM.html";
+
+
+}
+
   </script>
 </body>
 </html>
