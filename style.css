@@ -268,3 +268,11 @@ color: #ff8c00;
 color: #555;
 font-size: 15px;
 }
+
+.greeting {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 15px;
+  color: #ff8c00;
+  font-weight: bold;
+}
