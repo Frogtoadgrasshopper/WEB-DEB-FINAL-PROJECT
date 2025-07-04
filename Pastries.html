@@ -4,128 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Connect</title>
-    <link rel="stylesheet" href="styles.css">
-
-    
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        padding: 10px;
-    }
-    .container {
-        width: 100%;
-        max-width: 400px;
-        background-color: #ffffff;
-        border-radius: 15px;
-        border: 1px solid #ffffff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .header {
-        padding: 15px;
-        display: flex;
-        align-items: center;
-        border-bottom: 4px solid #edeaea;
-    }
-    .profile-icon {
-        width: 40px;
-        height: 40px;
-        background-color: #ffddbb; 
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 10px;
-        color: #ff8c00; 
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .search-container {
-        flex-grow: 1;
-        display: flex;
-        align-items: center;
-    }
-    .search-input {
-        width: 100%;
-        padding: 6px;
-        border: 1px solid #ddd;
-        border-radius: 1px;
-        font-size: 20px;
-    }
-    .categories {
-        display: flex;
-        flex-wrap: wrap; 
-        padding: 10px;
-    }
-    .category-button {
-        flex: 1; 
-        padding: 10px;
-        margin: 5px;
-        background-color: rgb(232, 229, 229); 
-        color: rgb(0, 0, 0);
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: bold;
-    }
-    .menu-container {
-        max-width: 600px; 
-        margin: 20px auto; 
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        color: #555;
-    }
-    .menu-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-        padding-bottom: 15px;
-        border-bottom: 1px solid #eee;
-    }
-    .menu-item:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    .menu-item img {
-        width: 80px;
-        height: 80px;
-        border-radius: 8px;
-        margin-right: 15px;
-        object-fit: cover; 
-    }
-    .item-details {
-        flex-grow: 1;
-    }
-    .item-details h3 {
-        font-size: 18px;
-        margin: 0;
-        color: #333;
-    }
-    .item-details p {
-        font-size: 14px;
-        color: #777;
-        margin: 5px 0 0;
-    }
-    .item-price {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-    }
-</style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
@@ -149,51 +28,127 @@
         <div class="menu-container">
             <h2>Pastries</h2>
 
-            <div class="menu-item">
+            <!-- Menu Items -->
+            <div class="menu-item" onclick="toggleOrder(this)">
                 <img src="https://www.corman.pro/wp-content/uploads/sites/2/recipe/4015/64525a1c94b01-bra038357-croissants-poolish-jpg-1041x1395.jpg" alt="Croissant">
                 <div class="item-details">
                     <h3>Croissant</h3>
                     <p>Pastries</p>
                 </div>
                 <div class="item-price">₱169.00</div>
-            </div>
+                <div class="order-buttons">
+          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+          <input type="text" class="qty-display" value="0" readonly />
+          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+        </div>
+      </div>
 
-            <div class="menu-item">
+            <div class="menu-item" onclick="toggleOrder(this)">
                 <img src="https://bungalow.cafe/cdn/shop/products/MoistBlueberryMuffin2_580x.jpg?v=1611300930" alt="Blueberry">
                 <div class="item-details">
                     <h3>Blueberry Muffin</h3>
                     <p>Pastries</p>
                 </div>
                 <div class="item-price">₱190.00</div>
-            </div>
+                <div class="order-buttons">
+          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+          <input type="text" class="qty-display" value="0" readonly />
+          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+        </div>
+      </div>
 
-            <div class="menu-item">
+            <div class="menu-item" onclick="toggleOrder(this)">
                 <img src="https://thecafesucrefarine.com/wp-content/uploads/2020/05/The-BEST-Most-Perfect-Banana-Bread-4.jpg" alt="Banana">
                 <div class="item-details">
                     <h3>Banana Bread</h3>
                     <p>Pastries</p>
                 </div>
                 <div class="item-price">₱90.00</div>
-            </div>
-
-            <div class="menu-item">
+                <div class="order-buttons">
+          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+          <input type="text" class="qty-display" value="0" readonly />
+          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+        </div>
+      </div>
+                
+            <div class="menu-item" onclick="toggleOrder(this)">
                 <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-11-cinnamon-rolls%2Fcinnamon-rolls-211" alt="Cinnamon">
                 <div class="item-details">
                     <h3>Cinnamon Roll</h3>
                     <p>Pastries</p>
                 </div>
                 <div class="item-price">₱79.00</div>
-            </div>
-
-            <div class="menu-item">
+                <div class="order-buttons">
+          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+          <input type="text" class="qty-display" value="0" readonly />
+          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
+        </div>
+      </div>
+            
+            <div class="menu-item" onclick="toggleOrder(this)">
                 <img src="https://millbakery.nz/cdn/shop/files/deliciousdanish.png?v=1730091023" alt="Mango">
                 <div class="item-details">
                     <h3>Mango Danish</h3>
                     <p>Pastries</p>
                 </div>
                 <div class="item-price">₱49.00</div>
-            </div>
+                <div class="order-buttons">
+          <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
+          <input type="text" class="qty-display" value="0" readonly />
+          <button class="order-btn" onclick="changeQty(event, this, 1)">+</button>
         </div>
+      </div>
+            
+<!-- Submit Button -->
+      <button class="submit-btn" onclick="submitOrder()">Submit Order</button>
     </div>
+  </div>
+
+  <script>
+    function toggleOrder(item) {
+      const buttons = item.querySelector('.order-buttons');
+      buttons.classList.toggle('show');
+    }
+
+    function changeQty(event, btn, delta) {
+      event.stopPropagation();
+      const wrapper = btn.parentElement;
+      const display = wrapper.querySelector('.qty-display');
+      let current = parseInt(display.value);
+      current = Math.max(0, current + delta);
+      display.value = current;
+    }
+
+    function submitOrder() {
+      const items = document.querySelectorAll('.menu-item');
+      const orderData = [];
+      let total = 0;
+
+      items.forEach(item => {
+        const name = item.querySelector('h3').innerText;
+        const price = parseFloat(item.querySelector('.item-price').innerText.replace('₱', ''));
+        const qty = parseInt(item.querySelector('.qty-display').value);
+        if (qty > 0) {
+          const subtotal = price * qty;
+          orderData.push({ name, price, quantity: qty, subtotal });
+          total += subtotal;
+        }
+      });
+
+      if (orderData.length === 0) {
+        alert('You have not selected any items.');
+        return;
+      }
+
+      localStorage.setItem('cafeOrder', JSON.stringify({
+        order: orderData,
+        total: total
+      }));
+
+      alert("Order saved to local storage!");
+
+      document.querySelectorAll('.qty-display').forEach(input => input.value = 0);
+    }
+  </script>
 </body>
 </html>
