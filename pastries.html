@@ -7,14 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+    <div class="container">
     <div class="header">
-      <div class="profile-icon">
-        <img src= alt="Profile" />
-      </div>
+      <img src="514070201_1658895074812204_8454167147154521375_n.png"  style="height: 50px; margin-right: 10px;" />
       <div class="search-container">
-        <input type="text" placeholder="search" class="search-input" />
-        <span class="search-icon">&#128269;</span>
+        <input type="text" placeholder="Current Promotions" class="search-input" disabled />
       </div>
     </div>
 
@@ -33,8 +30,8 @@
         <img src="https://www.corman.pro/wp-content/uploads/sites/2/recipe/4015/64525a1c94b01-bra038357-croissants-poolish-jpg-1041x1395.jpg" alt="Croissant" />
         <div class="item-details">
           <h3>Croissant</h3>
-        </div>
-          <div class="item-price">₱169.00</div>
+          </div>
+        <div class="item-price">₱190.00</div>
           <div class="order-buttons">
       <button class="order-btn" onclick="changeQty(event, this, -1)">−</button>
       <input type="text" class="qty-display" value="0" readonly />
@@ -171,7 +168,7 @@ function submitOrder(event) {
   }
 
   // Proceed to confirmation page
-   window.location.href = "confirmorder.html";
+  window.location.href = "confirmorder.html";
 }
 
   </script>
